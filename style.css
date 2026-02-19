@@ -2,58 +2,83 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f4f4f4;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+  color: #f4f4f4;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .main-title {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 .grid-item {
-  background: white;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.grid-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
 }
 
 .grid-item h2 {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .grid-item button {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
   border: none;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #4e9eff, #007bff);
+  color: white;
   cursor: pointer;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .grid-item button:hover {
-  background-color: #0056b3;
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #007bff, #0056b3);
 }
 
 .output {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 img {
   max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-top: 0.5rem;
+  border-radius: 8px;
+  margin-top: 0.75rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.movie {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
 }
